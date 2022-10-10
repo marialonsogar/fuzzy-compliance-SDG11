@@ -1,0 +1,2 @@
+zadeh==0.3.0
+matplotlib==3.6.1
