@@ -1,2 +1,6 @@
 zadeh==0.3.0
 matplotlib==3.6.1
+# PyPDF2==2.11.1
+# tabula-py==2.5.1
+# pdfminer==20191125
+openpyxl==3.0.10
