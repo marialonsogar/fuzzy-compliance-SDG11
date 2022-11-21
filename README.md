@@ -26,6 +26,7 @@ Subsequently, we use this information to define the Fuzzy logic Inference System
 
 <img src="doc\fis.svg">
 
+## Results
 With this approach, a model is built dinamically after knowing the available indicators for a country. The system uses these as input variables. After applying this method, the best and worst ranked countries are, respectively:
 
 | Best ranked countries by FIS | Worst ranked countries by FIS |
