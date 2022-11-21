@@ -24,7 +24,7 @@ Firstly, data from Sustainable Development Report 2022 is explored in [sd-report
 ## Modeling
 Subsequently, we use this information to define the Fuzzy logic Inference System (FIS) with the class defined in [VariableFIS.py](https://github.com/marialonsogar/fuzzy-compliance-SDG11/blob/main/fuzzy-sdg11/VariableFIS.py) and the process and demo explained in [fuzzy-system-demo.ipynb](https://github.com/marialonsogar/fuzzy-compliance-SDG11/blob/main/fuzzy-sdg11/fuzzy-system-demo.ipynb).
 
-![Fuzzy logic based system](https://raw.githubusercontent.com/marialonsogar/fuzzy-compliance-SDG11/main/doc/fuzzy-scheme-sdg11?token=GHSAT0AAAAAAB2QHVG7HBDGY567P7XIRAXEY33ORQA)<img src="https://raw.githubusercontent.com/marialonsogar/fuzzy-compliance-SDG11/main/doc/fuzzy-scheme-sdg11?token=GHSAT0AAAAAAB2QHVG7HBDGY567P7XIRAXEY33ORQA">
+![Fuzzy logic based system](doc\fis.svg)<img src="doc\fis.svg">
 
 With this approach, a model is built dinamically after knowing the available indicators for a country. The system uses these as input variables. After applying this method, the best and worst ranked countries are, respectively:
 
