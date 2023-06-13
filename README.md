@@ -29,7 +29,7 @@ Subsequently, we use this information to define the Fuzzy logic Inference System
 ## Results
 With this approach, a model is built dinamically after knowing the available indicators for a country. The system uses these as input variables. After applying this method, the best and worst ranked countries are, respectively:
 
-| **Country**           | **\textbf{$\nu_1$}** | **\textbf{$\nu_2$}** | **\textbf{$\nu_3$}** | **\textbf{$\nu_4$}** | **\textbf{$\nu_5$}** | **FIS Evaluation** |
+| **Country**           | **$\nu_1$** | **$\nu_2$** | **$\nu_3$** | **$\nu_4$** | **$\nu_5$** | **FIS Evaluation** |
 |:---------------------:|:--------------------:|:--------------------:|:--------------------:|:--------------------:|:--------------------:|:------------------:|
 | **Brunei Darussalam** | -                    | 5.102                | 99.60                | -                    | -                    | 89.771             |
 | **Tonga**             | -                    | 10.117               | 99.75                | -                    | -                    | 83.243             |
@@ -37,7 +37,7 @@ With this approach, a model is built dinamically after knowing the available ind
 | **Andorra**           | -                    | 11.189               | 100.00               | -                    | -                    | 75.114             |
 | **Netherlands**       | 0                    | 11.411               | 100.00               | 78.0                 | 6.144                | 74.950             |
 
-| **Country**                  | **\textbf{$\nu_1$}** | **\textbf{$\nu_2$}** | **\textbf{$\nu_3$}** | **\textbf{$\nu_4$}** | **\textbf{$\nu_5$}** | **FIS Evaluation** |
+| **Country**                  | **$\nu_1$** | **$\nu_2$** | **$\nu_3$** | **$\nu_4$** | **$\nu_5$** | **FIS Evaluation** |
 |:----------------------------:|:--------------------:|:--------------------:|:--------------------:|:--------------------:|:--------------------:|:------------------:|
 | **Togo**                     | 53.3                 | 41.082               | 41.827               | 29.0                 | -                    | 10.079             |
 | **South Sudan**              | 97.3                 | 46.141               | 10.489               | 18.0                 | -                    | 10.079             |
