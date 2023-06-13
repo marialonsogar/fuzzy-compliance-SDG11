@@ -12,14 +12,14 @@ The available data has been reinterpreted and the evaluation system based on an 
 # Fuzzy Inference System
 
 In order to obtain an assessment of an SDG, its indicators as currently defined in the report are taken as input variables. In the case of SDG 11, these are: 
-- Proportion of urban population living in slum, in percentage terms [%]
-- Annual mean concentration of particulate matter of less than 2.5 microns in diameter (PM2.5) [mg/m3]
-- Access to improved water source, in percentage terms of urban population [%]
-- Satisfaction with public transport, in percentage [%]
-- Population with rent overburden, in percentage [%]
+- Proportion of urban population living in slum, in percentage terms [%] (denoted by $\nu_1$)
+- Annual mean concentration of particulate matter of less than 2.5 microns in diameter (PM2.5) [mg/m3] ($\nu_2$)
+- Access to improved water source, in percentage terms of urban population [%] ($\nu_3$)
+- Satisfaction with public transport, in percentage [%] ($\nu_4$)
+- Population with rent overburden, in percentage [%] ($\nu_5$)
 
 ## EDA
-Firstly, data from Sustainable Development Report 2022 is explored in [sd-report.ipynb](https://github.com/marialonsogar/fuzzy-compliance-SDG11/blob/main/fuzzy-sdg11/sd-report.ipynb). We have seen that only 14.51% of data have information for all the five indicators. There are 8 possible combinations of avaible indicators, so 8 models are proposed depending on the input variables recorded. Finally, we have extracted the ranges of values that the variables can take for each defined colour. 
+Firstly, data from Sustainable Development Report 2022 is explored in [sd-report.ipynb](https://github.com/marialonsogar/fuzzy-compliance-SDG11/blob/main/fuzzy-sdg11/sd-report.ipynb). We have seen that only 14.51% of data (28 countries) have information for all the five indicators, and a 5.7% (11 countries) have only one non-missing value and therefore a evaluation cannot be provided for them. There are 8 possible combinations of avaible indicators, so 8 dynamic models are proposed depending on the input variables recorded. Finally, we have extracted the ranges of values that the variables can take for each defined colour to define their min and max range. 
 
 ## Modeling
 Subsequently, we use this information to define the Fuzzy logic Inference System (FIS) with the class defined in [VariableFIS.py](https://github.com/marialonsogar/fuzzy-compliance-SDG11/blob/main/fuzzy-sdg11/VariableFIS.py) and the process and demo explained in [fuzzy-system-demo.ipynb](https://github.com/marialonsogar/fuzzy-compliance-SDG11/blob/main/fuzzy-sdg11/fuzzy-system-demo.ipynb).
@@ -27,6 +27,7 @@ Subsequently, we use this information to define the Fuzzy logic Inference System
 <img src="doc\fis.svg">
 
 ## Results
+A major limitation has been identified during the data analysis: the lack of consistency in the data. Without complete information on all indicators for all countries it is not possible to provide a real and robust comparison. Although no data imputation method is defined, this fuzzy logic based method only takes into account the indicators available at any given time. 
 With this approach, a model is built dinamically after knowing the available indicators for a country. The system uses these as input variables. After applying this method, the best and worst ranked countries are, respectively:
 
 | **Country**           | **$\nu_1$** | **$\nu_2$** | **$\nu_3$** | **$\nu_4$** | **$\nu_5$** | **FIS Evaluation** |
@@ -45,11 +46,5 @@ With this approach, a model is built dinamically after knowing the available ind
 | **Equatorial Guinea**        | 66.1                 | 59.020               | 48.115               | -                    | -                    | 10.078             |
 | **Central African Republic** | 98.5                 | 61.733               | 32.291               | 25.0                 | -                    | 10.078             |
 
-
-| Best ranked countries by FIS | Worst ranked countries by FIS |
-|------------------------------|-------------------------------|
-| Brunei Darussalam            | Togo                          |
-| Tonga                        | South Sudan                   |
-| Tuvalu                       | Afghanistan                   |
-| Andorra                      | Equatorial Guinea             |
-| Netherlands                  | Central African Republic      |
+- The nation achieving the highest score, Brunei Darussalam, aligns with the current report's classification by being assigned a green color. Notably, this country stands alone in receiving a green color designation within the report. It is important to acknowledge that this evaluation does not stem from having all indicators categorized as green, but rather from presenting two green indicators while lacking reporting on the remainder. Thus, it is plausible that the model demonstrates a preference for information gaps. This pattern also holds true for the remaining countries occupying the top ranks. Conversely, the countries exhibiting the lowest scores correspondingly match those assigned a red color in the current report, indicating that their two poorest indicators are classified as red.
+- The analysis reveals a conspicuous pattern whereby countries in Asia, Oceania, and Europe exhibit a superior performance in aggregate terms, while Africa and the notable exception of Afghanistan, situated in Asia, exhibit comparatively unfavorable outcomes. In the present context, the reference to Sustainable Development Goal 11 (SDG 11) pertains to its focus on cities as distinctive units within countries and continents. Cities, in their capacity as catalysts for societal advancement, play a pivotal role in driving social progress. Thus, it becomes imperative to adopt a holistic perspective and actively engage in contemplation concerning this indicator, as it undeniably furnishes a comprehensive evaluation of sustainability progress.
